@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/sofiabogdanova/patientor#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "typescript": "^4.1.3"
   },
