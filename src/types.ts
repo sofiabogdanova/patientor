@@ -7,7 +7,7 @@ export interface PatientEntry {
     ssn:  string;
     gender: Gender;
     occupation:  string;
-};
+}
 
 export interface DiagnoseEntry {
     code: string;

@@ -4,12 +4,12 @@ import patientService from '../services/patientService';
 const router = express.Router();
 
 router.get('/', (_req, res) => {
-    console.log("bla")
+    console.log("bla");
     res.send(patientService.getNonSensitiveEntries());
-})
+});
 
 router.post('/', (_req, res) => {
     res.send('Saving a patient!');
-})
+});
 
 export default router;
