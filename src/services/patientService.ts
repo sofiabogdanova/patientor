@@ -17,7 +17,7 @@ const addEntry = (
     const patientEntry = {
         id: id(),
         ...entry
-    }
+    };
 
     patients.push(patientEntry);
     return patientEntry;

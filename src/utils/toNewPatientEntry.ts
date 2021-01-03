@@ -8,10 +8,10 @@ const toNewPatientEntry = (object: any): NewPatientEntry => {
         dateOfBirth: parseDate(object.dateOfBirth),
         occupation: parseOccupation(object.occupation),
         gender: parseGender(object.gender)
-    }
+    };
 
     return newEntry;
-}
+};
 
 const parseName = (name: any): string => {
     if (!name || !isString(name)) {
@@ -19,7 +19,7 @@ const parseName = (name: any): string => {
     }
 
     return name;
-}
+};
 
 const parseSsn = (ssn: any): string => {
     if (!ssn || !isString(ssn)) {
@@ -27,7 +27,7 @@ const parseSsn = (ssn: any): string => {
     }
 
     return ssn;
-}
+};
 
 const parseOccupation = (occupation: any): string => {
     if (!occupation || !isString(occupation)) {
@@ -35,7 +35,7 @@ const parseOccupation = (occupation: any): string => {
     }
 
     return occupation;
-}
+};
 
 const parseDate = (date: any): string => {
     if (!date || !isString(date) || !isDate(date)) {

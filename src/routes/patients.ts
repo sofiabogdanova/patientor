@@ -21,6 +21,6 @@ router.post('/', (req, res) => {
 
     const addedEntry = patientService.addEntry(newPatientEntry);
     res.json(addedEntry);
-})
+});
 
 export default router;
