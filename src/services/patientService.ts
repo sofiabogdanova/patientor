@@ -10,6 +10,10 @@ const getNonSensitiveEntries = (): NonSensitivePatientEntry[] => {
     return patients;
 };
 
+const getEntry = (id: string): PatientEntry => {
+    return patients.filter(patient => patient.id === id)[0];
+};
+
 const addEntry = (
     entry: NewPatientEntry
 ): PatientEntry => {
@@ -26,6 +30,7 @@ const addEntry = (
 const id = () =>  Math.floor(Math.random() * 1000).toString();
 
 export default {
+    getEntry,
     getEntries,
     getNonSensitiveEntries,
     addEntry
