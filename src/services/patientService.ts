@@ -1,7 +1,7 @@
 import patients from '../../data/patients';
 
-import {PatientEntry, NonSensitivePatientEntry, NewPatientEntry} from '../types';
-
+import {NewPatientEntry, NewVisitEntry, NonSensitivePatientEntry, PatientEntry} from '../types';
+const id = () => Math.floor(Math.random() * 1000).toString();
 const getEntries = (): Array<PatientEntry> => {
     return patients;
 };
@@ -27,11 +27,25 @@ const addEntry = (
     return patientEntry;
 };
 
-const id = () =>  Math.floor(Math.random() * 1000).toString();
+const addVisitEntry = (entry: NewVisitEntry, patientId: string): PatientEntry | undefined => {
+    const patient = patients.find(patient => patient.id === patientId);
+    const visitEntry = {
+        id: id(),
+        ...entry
+    }
+    if (patient) {
+        patient.entries.push(visitEntry)
+    }
+
+    return patient;
+};
+
+
 
 export default {
     getEntry,
     getEntries,
     getNonSensitiveEntries,
-    addEntry
+    addEntry,
+    addVisitEntry
 };
